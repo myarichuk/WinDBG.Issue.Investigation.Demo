@@ -1,0 +1,7 @@
+﻿1) take a multiple full-dumps via Process Explorer
+2) open the dump and execute commands in windbg:
+ * .loadby sos coreclr
+ * .load [path to sosex dll]\sosex
+ * !dlk (this is a sosex command, and it won't work on a mini-dump)
+ * notice the id of CLR threads, then execute !threads
+ * use OSID of threads involved in the deadlock and execute ~[OSID]s, then !clrstack. Do it for both threads and notice the stack trace

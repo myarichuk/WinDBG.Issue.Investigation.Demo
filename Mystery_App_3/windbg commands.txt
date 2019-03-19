@@ -1,0 +1,6 @@
+﻿1) take multiple a full dump via Process Explorer
+2) open the dump and execute commands in windbg:
+ * .loadby sos coreclr
+ * !dumpheap -stat
+ * !dumpheap /d -mt 00007ff8636d3c70 (ctrl+break to stop it early)
+ * !gcroot 0000022aa1ae6a20 (or any other address of relevant objects)
