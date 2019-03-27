@@ -10,7 +10,7 @@ namespace Mystery_App_3
     {
         public class SomeObjectThatUsesLotsOfMemory
         {
-            public string Foo { get; }
+            public string Foo { get; }  
 
             public SomeObjectThatUsesLotsOfMemory()
             {
@@ -37,7 +37,6 @@ namespace Mystery_App_3
         {
             Console.WriteLine($"Process ID: {Process.GetCurrentProcess().Id}");
             Console.Write("Working, press any key to stop... (note: the full dump will be written immediately after stopping)");
-
 
             var refs = new List<object>();
             var mre = new ManualResetEventSlim();
