@@ -1,0 +1,10 @@
+﻿1) attach WinDBG to the process
+ * execute "g" to let the process continue while WinDBG stays attached
+ * continue with the process until exception happens
+ * first "pause" will be at first chance exception - let it continue, press "g"
+ * when second chance exception occurs:
+	** .loadby sos coreclr -> initialize SOS commands so we can analyze .Net memory dump
+	** execute !analyze -v -> this will display all kinds of exception related information
+	** execute .exr -1 -> display more exception related information
+	** find "FAULTING THREAD" line and record the number (something like FAULTING_THREAD:  00002114)
+	** execute ~~[<thread number>]s, then !clrstack and see WHERE exactly the exception happened

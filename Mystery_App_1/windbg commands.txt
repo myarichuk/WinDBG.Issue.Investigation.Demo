@@ -1,7 +1,10 @@
 ﻿1) take a multiple full-dumps via Process Explorer
 2) open the dump and execute commands in windbg:
- * .loadby sos coreclr
- * .load [path to sosex dll]\sosex
- * !dlk (this is a sosex command, and it won't work on a mini-dump)
- * notice the id of CLR threads, then execute !threads
+ * .loadby sos coreclr -> initialize SOS commands so we can analyze .Net memory dump
+ * .load [path to sosex dll]\sosex - load SOSEX extension so its commands are available
+ * !dlk (this is a sosex command, and it won't work on a mini-dump) - a command that analyzes possible deadlocks and displays relevant information
+ * notice the id of CLR threads, then execute !threads - display list of threads in the process
  * use OSID of threads involved in the deadlock and execute ~[OSID]s, then !clrstack. Do it for both threads and notice the stack trace
+   -- ~[OSID]s selects a certain thread so we can run SOS commands on it
+   -- !clrstack - displays stack trace of the selected thread
+ * execute !gcroot on address of locked objects to find where they are in the code
