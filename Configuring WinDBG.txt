@@ -1,0 +1,20 @@
+1) Download either
+* WinDBG Preview from Windows Store - performance of this WinDBG is preferrable
+* Windows SDK (Windows 10 SDK if you have Windows 10). Make sure to install "Windows Debugging Tools" - 
+this will install "old" WinDBG
+
+2) Configure symbols:
+We need to configure from where symbols would be download by the WinDBG. 
+The idea here is to provide Microsoft server for OS level APIs, then provide local cache.
+If you do not see *YOUR* code in stack traces, you should make sure to place all PDBs in the same folder as the memory dump. 
+Note that PDBs of your code need to be from EXACTLY the same version as the assemblies/executables you are debugging, otherwise
+symbol loading would not work.
+* WinDBG Preview: File -> Settings -> Debugging Settings -> Symbols Path
+* "Old" WinDBG: File -> File Symbol Path
+
+3) Enter the following at the "symbols" text box:
+c:\symbols
+cache*c:\symbols
+SRV*c:\symbols*http://msdl.microsoft.com/download/symbols
+ 
+ Now 
