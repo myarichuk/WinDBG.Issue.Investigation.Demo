@@ -36,7 +36,7 @@ namespace Mystery_App_3
         static void Main(string[] args)
         {
             Console.WriteLine($"Process ID: {Process.GetCurrentProcess().Id}");
-            Console.Write("Working, press any key to stop... (note: the full dump will be written immediately after stopping)");
+            Console.Write("Working, press any key to stop...");
 
             var refs = new List<object>();
             var mre = new ManualResetEventSlim();

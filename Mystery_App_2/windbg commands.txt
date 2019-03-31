@@ -1,4 +1,8 @@
 ﻿1) take multiple mini-dumps via Process Explorer
 2) open each mini-dump and execute commands in windbg:
  * .loadby sos coreclr -> initialize SOS commands so we can analyze .Net memory dump
- * !eestack -ee -> show managed stack traces of current threads
+ * !eestack -ee -> show managed stack traces of current threads (IF they are managed threads)
+
+ if you load SOSEX, you can use MethodDesc address (method description) 
+ to disassemble the suspect method -> use the SOSEX command !muf [address]
+ This way it is possible to see what code is doing even if no sources are available...
