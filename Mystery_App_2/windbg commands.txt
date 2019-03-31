@@ -1,4 +1,4 @@
 ﻿1) take multiple mini-dumps via Process Explorer
 2) open each mini-dump and execute commands in windbg:
  * .loadby sos coreclr -> initialize SOS commands so we can analyze .Net memory dump
- * !eestack -ee -> show "interesting" stack traces of current threads
+ * !eestack -ee -> show managed stack traces of current threads

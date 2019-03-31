@@ -11,6 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mystery_App_3", "Mystery_Ap
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mystery_App_4", "Mystery_App_4\Mystery_App_4.csproj", "{7CDAADA2-3308-4BFB-9A3B-C5729B90A756}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A2188AF6-0F6F-4B7C-8FBD-0E25004308C1}"
+	ProjectSection(SolutionItems) = preProject
+		Configuring WinDBG.txt = Configuring WinDBG.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
