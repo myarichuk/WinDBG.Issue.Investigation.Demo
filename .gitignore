@@ -263,3 +263,5 @@ __pycache__/
 /mystery_app_2_B.dmp
 /mystery_app_2_A.dmp
 /mystery_app_1.dmp
+*.dmp
+/windbg stuff.txt
