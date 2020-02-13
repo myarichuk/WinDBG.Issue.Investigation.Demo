@@ -17,4 +17,3 @@ c:\symbols
 cache*c:\symbols
 SRV*c:\symbols*http://msdl.microsoft.com/download/symbols
  
- Now 
