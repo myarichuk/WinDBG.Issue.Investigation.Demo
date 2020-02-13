@@ -8,11 +8,11 @@ namespace Mystery_App_3
 {
   class Program
     {
-        public class SomeObjectThatUsesLotsOfMemory
+        public class ApplicationObjectD
         {
             public string Foo { get; }  
 
-            public SomeObjectThatUsesLotsOfMemory()
+            public ApplicationObjectD()
             {
                 Foo = new string('a', 128);
             }
@@ -54,7 +54,7 @@ namespace Mystery_App_3
                         new ApplicationObjectC();
 
                     if(i % 50 == 0)
-                        refs.Add(new SomeObjectThatUsesLotsOfMemory());
+                        refs.Add(new ApplicationObjectD());
 
                     if (i % 10000 == 0)
                     {

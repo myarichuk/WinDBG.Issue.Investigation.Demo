@@ -1,0 +1,7 @@
+﻿1) Attach WinDBG to the process
+2) execute .loadby sos coreclr
+3) !dumpheap -stat
+  * notice the amount of Mystery_App_5.AMysteryClass
+4) !finalizequeue
+  * notice "Ready for finalization 8051684 objects (000001AAA800A278->000001AAABD78198)"
+Hence, the issue is slow finalizers
