@@ -8,3 +8,7 @@
 	** execute .exr -1 -> display more exception related information
 	** find "FAULTING THREAD" line and record the number (something like FAULTING_THREAD:  00002114)
 	** execute ~~[<thread number>]s, then !clrstack and see WHERE exactly the exception happened
+
+note: use <sxe av> to make sure that WinDBG breaks on first-chance and second-chance Access Violation Exceptions, 
+and <sxd av> to break only on second-chance exceptions
+first-chance means exception is thrown but there is no catch block to handle it
